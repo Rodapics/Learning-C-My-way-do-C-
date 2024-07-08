@@ -1,0 +1,10 @@
+#Todas las instrucciones que queremos darle a GNUPLOT, las colocaremos siempre en un archivo aparte.
+#Eso es un script.
+#Enhanced, es para usar subindices o superindices, símbolos.
+set terminal pngcairo font "times,26" enhanced color size 900,600
+
+set output "Grafica26Nov.png"
+
+plot exp(-x**2) with lines points
+#x al cuadrado
+unset output

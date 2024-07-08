@@ -1,0 +1,127 @@
+%Esto es un comentario :D 
+%------------------Encabezado: tiene los paquetes----------------------------------
+%Empezamos definiendo que tipo de documento vamos a usar.
+%respetar la gerarquía entre corchetes y llaves. Paquetes y especifidad.
+
+\documentclass[onecolumn]{article} %report, book %números de columnos
+
+\usepackage[latin1,utf8]{inputenc} %idioma, latin1:español, inputenc es el paquete de idiomas de occidente %utf8, guión, comas, mayor que, etc, lo que se puede teclar.
+\usepackage{graphics,graphicx,xcolor} %xcolor, para colores %figuras
+\usepackage{amssymb,amsmath} %Lenguaje matemático %amsmath, el de las integrales
+\usepackage{verbatim} %Escribir código
+\usepackage{bm} %negrita
+%Cambiar margenes, usar más paquetes.
+%Fecha en español. Nota: \renewcommand. También paquete para email.
+%C y C++, Funciona de manera similar, con paquetes, primero los introducimos.
+%Como escribir el simbolo porcentaje sin añadir comentario
+%Reducir tamaño de margenes
+%Cambiar fuente de letra, tamaño de letra, centrar, alinear a la izquierda, cambiar el temmplate. "centrar section latex"
+%Como poner las comillas en español
+%Cambiar simbolo de la viñeta
+
+%---------------------------------------------------------------------
+\title{Mi primer proyecto en Overleaf}
+\author{CARLOS ANDRES RODALLEGA MILLAN}
+\date{\today}
+
+%---------------------------------------------------------------------
+%Toda pareja que comienza con \Begin y termina con \END se llama ENTORNO
+%++++++++++++++++++++++CUERPO DEL DOCUMENTO+++++++++++++++++++++++++++
+\begin{document}
+\maketitle %HAGA el título.... (que está arriba)
+%.-.-.-.-.
+\section{Inclusión de texto} %Hace una sección
+Si yo comienzo a escribir en mi documento, me doy cuenta que simplemente el texto comienza a ser parte de mi documento.
+\subsection{Enumeraciones: con números o con viñetas}
+Comencemos con la enumeraciones que utilizan números para cada uno de los ítems.
+%enumeraciones con números
+\begin{enumerate}
+    \item Recuerde que toda pareja que comienza "begin" y termina con "end" se llama ENTORNO
+    \item Las secciones no son entornos.
+\end{enumerate}
+%Tabular para saber que es lo que está dentro del entorno. %Se respeta la jerarquía.
+También puedo tener entornos que enumeran con viñetas.
+\begin{itemize}
+    \item Primera viñeta.
+    \begin{enumerate}
+        \item Primer número.
+        Intalen el Texmaker para   
+        \begin{itemize}
+            \item Esta es la primera viñeta de la primera enumeración de la primera viñeta
+        \end{itemize}
+        \item Segundo número.
+    \end{enumerate}
+    \item Segunda viñeta.
+    \item La tercera viñeta.
+\end{itemize}
+\section{Inclusión de ecuaciones} %Hace una sección
+Haremos ina introducción a la escritura de ecuaciones usando LaTex, como herramienta principal de comunicación en la realización de documentos científicos
+\subsection{Ecuaciones de una sola línea}
+Haremos primero un ejemplo de ecuación sin enumeración y que se encuentra en una línea:
+%Signo pesos doble
+$$y(t)=y_0+v_0+\frac{1}{2}at^2$$
+Si queremos colocar un conjunto de subíndices lo que debemos hacer es colocarlos todos o agruparlos entre corchetes. \{\}
+
+%Así se puede colocar cosas entre corchetes
+$$x_{0,1}=f(x_{2,1},x_{4,3})$$
+Para escribir ecuaciones que sí tengan enumeración entonces usamos el entorno \verb+equiation+
+%como meter código entre línea con una forma diferente.
+%El nombre siempre se guarda en el archivo auxiliar. (50 ecuaciones).
+%Compilar dos veces.
+\begin{equation}
+\label{ec_mov y} %Sirve para dar el nombre
+y(t)=y_0+v_0+\frac{1}{2}at^2
+\end{equation}
+Para obtener esta ecuación \ref{ec_mov y}, usamos el siguiente código que esta escrito mediante el entorno \verb+verbatim+:
+\begin{verbatim}
+\begin{equation}
+y(t)=y_0+v_0+\frac{1}{2}at^2
+\end{equation}
+\end{verbatim}
+La pareja \verb+label+ y \verb+ref+ es la que se utiliza para darle nombres a una ecuación, figura, tabla, etc, y luego llamarla en el texto.
+\subsection{Ecuaciones de más de una línea}
+Para escribir ecuaciones de una línea vamos a usar el entorno \verb+eqnarray+ o el entorno \verb+align+ 
+\paragraph{Veamos dos ejemplos:}
+Escribamos tres de las hermosas ecuaciones de Maxwell
+\begin{eqnarray}
+\label{Max3}
+\nabla\cdot\mathbf{E} &=&\rho \nonumber\\
+\nabla\cdot\mathbf{B} &=&0. \\
+\nabla\times\mathbf{E} &=& \mathbf J \nonumber
+%Signo & es indispensable el uso de este uso de estas alineaciones.
+%\nonumber sirve para no dejar la enumeración. Todo el conjunto se llama dos.
+\end{eqnarray}
+En el \verb+eqnarray+ es indispensable el uso del \& a lado y lado del símbolo por el que vamos a alinear las ecuaciones como se muestra en la ecuación \ref{Max3}
+{\bf Nota: no olvidar cortar las línea usando un doble backslash, la última línea no se corta}
+\\
+La otra forma es usando el entorno \verb+align+
+\begin{align}
+f(x)&=\alpha + \beta x + \gamma x^2 \nonumber \\ 
+&+\delta x^3  \\
+&+\rho x^4+ \lambda x^5 \nonumber
+\end{align}
+%Ver el uso de &
+Para omitir la enumeraciones de cualquiera de los entornos, bastan con colocar un * en el lado derecho del entorno.
+\begin{align*}
+f(x)&=\alpha + \beta x + \gamma x^2 \\ 
+&+\delta x^3  \\
+&+\rho x^4+ \lambda x^5 
+\end{align*}
+\subsection{Ecuaciones embebidas en el texto}
+También es posible colocar ecuaciones entre el texto. Por ejemplo, si yo hablo de la ecuación de la recta, la cual tiene la forma funcional $y=mx+b$.Puedo escribirla usando un único símbolo \$ antes y después de la ecuación.
+
+
+\section{Inclusión de gráficas} %Hace una sección
+%Insertaremos las graficas de gnuplot.
+La gráfica la incluimos en LaTex, usando el entorno \verb+figure+ con el comando \verb+includegraphics+
+\begin{figure}[h!]%[h! here, para la gráfica]
+\centering %para centrar
+\includegraphics[scale=0.4]{grafica_16Nov.png}
+\caption{\label{fig_cos}Es una función $\cos(x)$ para ilustrar como introducir gráficas en LaTex} %Enumera la gráfica.
+%Tarea, como cambiar a español.
+\end{figure}
+Luego de incluir la gráfica, de usar el comando \verb+caption + y de darle un nombre usando\verb+label+ entonces en el texto puedo llamar a la gráfica \ref{fig_cos} y así hacer referencia a ella.
+
+\section{Inclusión de tablas} %Hace una sección
+
+\end{document}

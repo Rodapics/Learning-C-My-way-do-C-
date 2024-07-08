@@ -1,0 +1,20 @@
+---------Formas de escribir las cosas------------
+a=a+b; // se cambia la asinación en a
+
+
+a+=b;  // a=a+b
+
+a-=b; // a=a-b
+
+a*=b; // a=a*b
+
+a%=b; // a=a%b
+
+
+//Cuando el incremento o decremento es 1 (Adictiva).
+
+a++; //a+=1;  a=a+1
+
+a--; //a-=1; //a=a-1
+++a;
+--a;

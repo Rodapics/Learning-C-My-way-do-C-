@@ -1,0 +1,56 @@
+Clase 07 programación
+* Revisar más cosas sobre gnuplot. 3D
+* composiciones de gráficas
+	* Multiplot
+*Diagramas de flujo (Pensar nuestros códigos, pensamiento algoritmico) -> Lógica -> Dar instrucciones al Pc.
+	*Convección
+		-Símbolos, partes del código.
+*Enero, C y C++.
+
+
+------Primer parcial------
+
+Qué se espera y qué se puede esperar, 30 mins de la clase.
+///
+
+Rango en terminos de radianes. "pi".
+Hacer templates.
+Varias gráficas -> composicón de figuras, multiplot.
+
+Unset label
+
+Set label "Hola"
+
+set pm3d at bs
+Integrado con la caja de huevos
+
+*set hidden3d
+ Distinguir parte de arriba y parte de abajo.
+*set xtics ("\symbol p" pi,"\symbol -p" -pi)
+
+
+---------Parcial--------------
+*Latex
+	Entornos
+		Enumerar
+			Numeros
+			Viñetas
+		Ecuaciones			Captions (Label/ref, enumeración en el doc)
+			Ecuaciones
+			Arreglos
+		Tablas
+		Figuras
+
+
+		
+*Gnuplot
+*Diagramas de flujos
+
+
+
+
+
+
+
+
+

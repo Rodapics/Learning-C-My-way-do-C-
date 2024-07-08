@@ -1,0 +1,9 @@
+------------------Apuntes Gnuplot vídeos----------------
+*plot "función" notitle  #Hacer la función sin el título dentro de la gráfica.
+*set key "Lugar" #Poner el título en gráfica donde se quiera.
+*plot "función" w l #wh lines
+*plot "función" w lp #whith lines and points.
+*plot "función" w p #whith points.
+*plot "función" w boxes #whith boxes
+*plot "función 1","Función 2" #Para añadir dos funciones.
+*test #Nos da muchas cosas

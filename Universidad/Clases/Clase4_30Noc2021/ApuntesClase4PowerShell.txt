@@ -1,0 +1,43 @@
+* Para listar usamos ls
+El modo habla de la clase de archivos: directorios (d-r), archivos(a).
+  - La "r" es de read.
+* cd para ir a un lugar
+* cd.. para salir de un lugar (El lugar suele ser carpetas, directorios)
+* Los archivos no pueden ser directorios
+
+*mkdir Haga un directorio, nombre después del comando
+*cp es para copiar, comando, dirección de salida y dirección de entrada
+*pwd es para el camino de un archivo o un directorio.
+*hacer cosas como superusuarios.
+* Nombres de las carpetas con espacioscd..
+*mv para mover. (Cambiar nombre).
+*rm para remover.
+Editor de texto. Manipular el editor de texto desde Pwpdflatex
+*pdflatex para llamar a LaTex
+*Vamos a llamar a Latex
+
+Varibles de usuario, Varibles de sistema
+Editar el path en cualquiera de las dos.
+Editarla para ambos.
+
+*atom para llamar a atom
+
+
+*subl para llamar a sublime
+-----------------------
+Para dev c++
+
+*g++.
+
+No sirve realizarlo con mathematica. Mathematica ya tiene un entorno realizado.
+
+
+gnuplot
+pdflatex
+g++
+subl
+okular
+
+
+
+

@@ -1,0 +1,63 @@
+%Esto es un comentario :D 
+%------------------Encabezado: tiene los paquetes----------------------------------
+%Empezamos definiendo que tipo de documento vamos a usar.
+%respetar la gerarquía entre corchetes y llaves. Paquetes y especifidad.
+
+\documentclass[onecolumn]{article} %report, book %números de columnos
+
+\usepackage[latin1,utf8]{inputenc} %idioma, latin1:español, inputenc es el paquete de idiomas de occidente %utf8, guión, comas, mayor que, etc, lo que se puede teclar.
+\usepackage{graphics,graphicx,xcolor} %xcolor, para colores %figuras
+\usepackage{amssymb,amsmath} %Lenguaje matemático %amsmath, el de las integrales
+\usepackage{verbatim} %Escribir código
+\usepackage{bm} %negrita
+%Cambiar margenes, usar más paquetes.
+%Fecha en español. Nota: \renewcommand. También paquete para email.
+%C y C++, Funciona de manera similar, con paquetes, primero los introducimos.
+%Como escribir el simbolo porcentaje sin añadir comentario
+%Reducir tamaño de margenes
+%Cambiar fuente de letra, tamaño de letra, centrar, alinear a la izquierda, cambiar el temmplate. "centrar section latex"
+%Como poner las comillas en español
+%Cambiar simbolo de la viñeta
+
+%---------------------------------------------------------------------
+\title{Mi primer proyecto en Overleaf}
+\author{CARLOS ANDRES RODALLEGA MILLAN}
+\date{\today}
+
+%---------------------------------------------------------------------
+%Toda pareja que comienza con \Begin y termina con \END se llama ENTORNO
+%++++++++++++++++++++++CUERPO DEL DOCUMENTO+++++++++++++++++++++++++++
+\begin{document}
+\maketitle %HAGA el título.... (que está arriba)
+%.-.-.-.-.
+\section{Inclusión de texto} %Hace una sección
+Si yo comienzo a escribir en mi documento, me doy cuenta que simplemente el texto comienza a ser parte de mi documento.
+\subsection{Enumeraciones: con números o con viñetas}
+Comencemos con la enumeraciones que utilizan números para cada uno de los ítems.
+%enumeraciones con números
+\begin{enumerate}
+    \item Recuerde que toda pareja que comienza "begin" y termina con "end" se llama ENTORNO
+    \item Las secciones no son entornos.
+\end{enumerate}
+%Tabular para saber que es lo que está dentro del entorno. %Se respeta la jerarquía.
+También puedo tener entornos que enumeran con viñetas.
+\begin{itemize}
+    \item Primera viñeta.
+    \begin{enumerate}
+        \item Primer número.
+        Intalen el Texmaker para   
+        \begin{itemize}
+            \item Esta es la primera viñeta de la primera enumeración de la primera viñeta
+        \end{itemize}
+        \item Segundo número.
+    \end{enumerate}
+    \item Segunda viñeta.
+    \item La tercera viñeta.
+\end{itemize}
+\section{Inclusión de ecuaciones} %Hace una sección
+
+\section{Inclusión de gráficas} %Hace una sección
+
+\section{Inclusión de tablas} %Hace una sección
+
+\end{document}

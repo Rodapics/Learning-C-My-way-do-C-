@@ -1,0 +1,50 @@
+Progrmación
+
+C/C++						Papá C             &               Hijo C++               Lenguajes independientes, familiares.
+
+Todo se puede hacer en c++ se puede hacer en C, excluyendo la programación a objetos.
+Todo programa lo puedo hacer en uno o e otro.
+Sacar lo más fácil de ambos.
+Ver que podemos realizar en cada uno.
+
+
+¿Por qué C/C++? => útil para programación científica de elevados recursos.
+
+1) Rápida.
+
+	Estructura misma del lenguaje.
+	El tiempo de interprete para pasar el lenguaje de maquina, solo se realiza una vez, solo se llama una vez al compilador. Después de esto se puede correr cuantas veces quiera.
+
+
+2) Utilizar los recursos del computador (ÓTIMAMENTE).
+				Lenguaje de promación más cerca al aparato.
+						Lenguaje de bajo nivel.
+
+
+
+Los lenguajes se dividen den dos categorías.
+
+Alto Nivel
+Bajo Nivel
+
+A su vez, estos se dividen en los que hacen sus instrucciones de dos formas:
+
+-En vivo. Lenguajes Interpretados. (Necesitan un interprete). Necesitan instalados el programa(Interprete, correr cada vez).
+	Mathematica
+	Phyton
+	Matlab
+
+
+
+
+-Paso intermedio. Lenguajes compilados. (Solo necesitan el compilador para correr, este paso solo se realiza una vez).
+
+--------------------------------------------
+
+Paso 1. Escribir código (Lenguaje de programación). En lo que más nos vamos a centrar el resto de semestre.
+Como resultado, tendremos un archivo fuente(.C .c .cpp). Mandar el programa es mandar el archivo fuente. Aquí usamos .cpp
+
+
+
+
+
