@@ -1,0 +1,292 @@
+//Using an IF statement inside a FOR loop: Find the largest array element
+
+#include <stdio.h>
+int main(void) {
+    //! showArray(ages, cursors=[i])
+    int ages[10];
+    int i;
+    int ageMax = 0;
+    for (i=0; i<10; i++) {
+        scanf("%d", &ages[i]);
+        if (ages[i] > ageMax) {
+            ageMax = ages[i];
+        }
+    }
+    printf("The maximum age is %d.\n", ageMax);
+    return 0;
+}
+
+//Compute with arrays:
+
+
+#include <stdio.h>
+int main(void) {
+    //! showArray(ages, cursors=[i])
+    int ages[10];
+    int i;
+    int ageMax = 0;
+    for (i=0; i<10; i++) {
+        scanf("%d", &ages[i]);
+        if (ages[i] > ageMax) {
+            ageMax = ages[i];
+        }
+    }
+    printf("The maximum age is %d.\n", ageMax);
+    printf("Age differences with the eldest person:\n");
+    for(i=0;i<10;i++){
+        printf("%d:%d ", ages[i],ageMax-ages[i]);
+    }
+    return 0;
+}
+
+//Activity:
+
+You plan to make a delicious meal and want to take the money you need to buy the ingredients. Fortunately you know in advance the price per pound of each ingredient as well as the exact amount you need. The program should read in the number of ingredients (up to a maximum of 10 ingredients), then for each ingredient the price per pound. Finally your program should read the weight necessary for the recipe (for each ingredient in the same order). Your program should calculate the total cost of these purchases, then display it with 6 decimal places.
+
+#include<stdio.h>
+
+int main(void){
+    
+    int nu_ingre = 0;
+    
+    scanf("%d",&nu_ingre);
+    
+    
+    double price[nu_ingre];
+    double ingredient[nu_ingre];
+    
+    double total=0;
+    
+    for(int i=0; i<nu_ingre;i++){
+        scanf("%lf",&price[i]);
+    }
+    
+    for(int i=0; i<nu_ingre;i++){
+        scanf("%lf",&ingredient[i]);
+    }
+    
+    for(int i=0; i<nu_ingre;i++){
+        
+        total = total + (price[i]*ingredient[i]);
+    }
+    
+    printf("%lf",total);
+    
+    return 0;
+}
+
+
+%%%%
+
+//Nesting IF and FOR: 
+
+#include <stdio.h>
+int main(void) 
+{
+    int target;
+    int i;
+    printf("Please enter a target number: ");
+    scanf("%d", &target);
+    if (target >= 0) 
+    {
+        for (i=0; i<target; i++) 
+        {
+            if (i%2) 
+            {
+                printf("%d ", i);
+            }
+        }
+    } 
+    else 
+    {
+        printf("Nothing to do!\n");
+    }
+    return 0;
+}
+
+
+//Activity:Activity: branch inside a loop, how many big cities?
+//You want to determine the number of cities in a given region that have a population strictly greater than 10,000. To do this, you write a program that first reads the number of cities in a region as an integer, and then the populations for each city one by one (also integers).
+
+#include<stdio.h>
+
+int main(void){
+    
+    int nu_cities = 0;
+    
+    scanf("%d",&nu_cities);
+    
+    int pupulation[nu_cities];
+    
+    
+    for(int i=0; i<nu_cities;i++){
+    scanf("\n%d",&pupulation[i]);
+    }
+    
+    int flag=0;
+    
+    for(int i=0; i<nu_cities;i++){
+        if(pupulation[i]>10000){
+            flag = flag + 1;
+            
+        }
+    }
+    
+    printf("%d",flag);
+    
+    
+    return 0;
+}
+%%%%%%%
+//Repeating inside repetition: Nest FOR loops
+
+#include <stdio.h>
+int main(void){
+    int nbThrows = 0;
+    int nbDice = 0;
+    int diceValue = 0;
+    int throwSum = 0;
+    int throw = 0;
+    int dice = 0;
+    scanf("%d %d", &nbThrows, &nbDice);
+    for(throw = 0; throw<nbThrows; throw++){
+        for(dice = 0; dice<nbDice; dice++){
+            scanf("%d", &diceValue);
+            throwSum = throwSum + diceValue;
+        }
+        printf("throw %d sum equals %d\n", throw, throwSum);
+        throwSum = 0;
+    }
+    return 0;
+}
+
+//Activity: Create a program that displays on the screen a square of n x n stars, with the integer n given as an input.
+
+#include<stdio.h>
+
+
+int main(void){
+    
+    int input=0;
+    scanf("%d",&input);
+    
+    for(int i=0; i<input;i++){
+        for(int j=0; j<input;j++){
+            printf("*"); 
+        }
+        printf("\n");
+    }
+    
+    
+    
+    return 0;
+}
+
+
+%%%%%%
+
+//Repeating using a WHILE loop:Repeat instructions using a while loop - introduction
+
+#include <stdio.h>
+int main(void) {
+    int diceValue;
+    int notSix;
+    scanf("%d", &diceValue);
+    notSix = diceValue != 6;
+    while (notSix) {
+        scanf("%d", &diceValue);
+        notSix = diceValue != 6;
+    }
+    return 0;
+}
+
+//Repeat using a while loop:
+#include <stdio.h>
+int main(void) {
+    int diceValue = 0;
+    int nbThrows = 0;
+    scanf("%d", &diceValue);
+    while(diceValue != 6){
+        scanf("%d", &diceValue);
+        nbThrows = nbThrows + 1;
+    }
+    printf("We needed %d throws to get the value 6\n", nbThrows+1);
+    return 0;
+}
+
+
+
+
+
+
+//Activity: Much of the work of a university administration (in addition to managing teachers, researchers, students, courses, etc.) is to ensure the proper functioning of the university and in particular that the accounting job is well done. Once a year, an annual report of expenditures must be made.
+
+All expenses for the year have been recorded and classified in a multitude of files and the sum of all these expenses must now be calculated. But no one knows exactly how many different expenses have been made in the past year!
+
+Your program will have to read a sequence of positive integers and display their sum. We do not know how many integers there will be, but the sequence always ends with the value -1 (which is not an expense, just an end marker).
+
+
+#include<stdio.h>
+
+int main(void){
+    int sum =0;
+    
+    int sum2=0;
+    int sum3=0;
+    
+    int flag =1;
+    
+    while(flag>0){
+        
+        scanf("%d",&sum);
+        if(sum==-1){
+            break;
+        }
+        sum3 = sum2 + sum;
+        
+        flag =sum;
+        
+        sum2 = sum3;
+        
+    }
+    printf("%d",sum3);
+    
+    
+    return 0;
+}
+
+%%%%%
+// Efficiently using a WHILE loop:Check a logic statement to continue looping
+
+#include <stdio.h>
+int main(void) {
+    int signaturesNeeded = 1000;
+    int day = 0;
+    int newSignatures = 3;
+    int totalSignatures = 3;
+    while (totalSignatures < 1000) {
+        day++;
+        newSignatures = 2*newSignatures;
+        printf("Day %d: %d new signatures! ", day, newSignatures);
+        totalSignatures = totalSignatures + newSignatures;
+        printf("Total: %d\n", totalSignatures);
+    }
+    return 0;
+}
+
+
+
+//Activity: controlling an epidemic
+//In order to be able to better fight various epidemics in a region, the department of medicine of a major university has launched a large study. Researchers are interested in how fast an epidemic spreads, and therefore the speed at which health measures must be put in place. Your program should first read an integer representing the total population of the area. Knowing that a person was infected on day 1 and that each infected person contaminates two new people every day, you must calculate the day at which the entire population of the area will be infected.
+
+
+
+
+
+
+
+
+
+
+
+
