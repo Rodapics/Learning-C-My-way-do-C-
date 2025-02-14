@@ -1,0 +1,105 @@
+
+%latex archivoLatex.tex ; dvips archivoLatex.dvi ;ps2pdf archivoLatex.ps
+
+\documentclass[onecolumn]{article}
+\usepackage{amsmath,amssymb}         %Mathematics lenguaje
+\usepackage{bm}                      %Bold math
+\usepackage{graphicx,graphics,xcolor}       %Figures
+\usepackage{psfrag}                  %Figures    
+\usepackage{dcolumn}                 %Align table columns on decimal point
+\usepackage[latin1,utf8]{inputenc}   %Lenguaje
+\usepackage{verbatim}                %Writting code 
+
+\begin{document}
+
+\title{Título}
+\author{Autor y código}
+\date{\today}
+
+\maketitle
+
+En el presente documento se encuentra como hacer un documento usando LaTex por primera vez. Lo importante es que siga instrucciones y no se salte ningún paso, línea o comando, ya que ésto le llevará a tener una lista de errores que le impedirán generar el documento desado.
+
+En una primera instancia es necesario hacer el encabezado y el esqueleto del documento, ésta información la encuentra en la sección~\ref{encabezado}. Posteriormente en la sección~\ref{cuerpo-documento} encuentra un listado parcial de las posibles partes que un documento LaTex puede tener. Sin embargo no use este docuemento como texto fuente para aprender los comandos de LaTex, para éste fin está el texto ``No so short intruduction to LaTex'' en el campus virtual, o utilice toda la documentación que se encuentra en la red. Les recomiendo el Wikibook:\\
+https://en.wikibooks.org/wiki/LaTeX .
+
+Finalmente en la sección~\ref{consola} se explica el proceso de compilación desde consola de su archivo fuente hecho usando LaTex.
+
+\section{Encabezado y esqueleto del documento}\label{encabezado}
+\begin{verbatim}
+\documentclass[onecolumn]{article}
+\usepackage{amsmath,amssymb}         %Mathematics lenguaje
+\usepackage{bm}                      %Bold math
+\usepackage{graphicx,graphics,xcolor}       %Figures
+\usepackage{psfrag}                  %Figures    
+\usepackage{dcolumn}                 %Align table columns on decimal point
+\usepackage[latin1,utf8]{inputenc}   %Lenguaje
+\usepackage{verbatim}                %Writting code 
+
+\begin{document}
+
+\title{Título}
+\author{Autor y código}
+\date{\today}
+
+\maketitle
+
+\end{verbatim}
+
+\section{Cuerpo del documento}\label{cuerpo-documento}
+\subsection{Partes del documento}
+
+\begin{enumerate}
+\item Texto.
+\item Enumeraciones.\\
+Puede utilizar números:
+\begin{verbatim}
+\begin{enumerate}
+\end{enumerate}
+\end{verbatim}
+O puede utilizar ítems:
+\begin{verbatim}
+\begin{itemize}
+\end{itemize}
+\end{verbatim}
+\item Secciones, subsecciones, parágrafos.
+\begin{verbatim}
+\section{Título}
+\subsection{Título}
+\subsubsection{Título}
+\paragraph{Título}
+\end{verbatim}
+
+\item Tablas.
+\begin{verbatim}
+\begin{tabular}
+\end{tabular}
+\end{verbatim}
+
+\item Lenguaje matemático: ecuaciones, matrices,teoremas. 
+\begin{verbatim}
+\begin{equation}
+\end{equation}
+\end{verbatim}
+\item Gráficas.
+\item Libros: anidación de varios archivos.
+\item Bibliografía, apéndices, lista de tablas y gráficas, tabla de contenido.
+\end{enumerate}
+
+\section{En consola: compliar y obtener el pdf}\label{consola}
+\begin{enumerate}
+\item Compilar el archivo fuente archivo.tex y obtención del archivo.dvi:
+\begin{verbatim}
+$ latex archivoLatex.tex
+\end{verbatim}
+\item Conversión del archivo .dvi a PostScript .ps:
+\begin{verbatim}
+$ dvips archivoLatex.dvi 
+\end{verbatim}
+\item Conversión del archivo .ps a .pdf:
+\begin{verbatim}
+$ ps2pdf archivoLatex.ps
+\end{verbatim}
+\end{enumerate}
+
+\end{document}

@@ -58,6 +58,16 @@ int main(int argc, char* argv[]){
 	// square root
 	// exponential function
 	z = pow(x, y); // x to the power of y
-	z = M_PI;
+	z = M_PI;  // z stores the value of PI
 	return 0;
 }
+
+
+/*
+Many other mathematical functions are available. The functions cos, sin, tan,
+acos, asin, atan, cosh, sinh, tanh, log, log10, ceil, floor can be used
+in exactly the same way as sqrt and exp in the code above: that is, they accept
+one argument, and return one value.
+
+
+*/
